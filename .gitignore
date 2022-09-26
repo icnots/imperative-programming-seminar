@@ -1,7 +1,10 @@
-*
+!exercises/*.md
 !**.c
 !**.md
 !**.h
 !**.hpp
 !**.cpp
 !**.cc
+**.o
+**/a.out
+**/main
