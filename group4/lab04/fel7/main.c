@@ -7,6 +7,8 @@ int main(){
     
     scanf("%d", &i);
     i = i ^ minusOne; /* binary xor operator */
+    i = ~ i; /* binary negation */
+    i = -1 * i - 1; /* numerical meaning */
     printf("%d\n", i);
 
     return 0;
