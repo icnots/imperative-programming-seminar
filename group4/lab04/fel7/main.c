@@ -6,7 +6,7 @@ int main(){
     /* if I add 1 to -1, I get 0, so binary 11..11 corresponds to -1 in the memory. */
     
     scanf("%d", &i);
-    i = i ^ minusOne;
+    i = i ^ minusOne; /* binary xor operator */
     printf("%d\n", i);
 
     return 0;
