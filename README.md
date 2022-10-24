@@ -10,6 +10,7 @@ Imperatív programozás gyakorlat
 * [4. gyakorlat](exercises/04.md)
 * [5. gyakorlat](exercises/05.md)
 * [6. gyakorlat](exercises/06.md)
+* [7. gyakorlat](exercises/07.md)
 
 
 Órai forráskódok elérhetőek az adott csoport megfelelő könyvtárában.
