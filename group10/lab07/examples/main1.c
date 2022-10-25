@@ -16,6 +16,12 @@ int main(){
     **pp = 4;
     *p = 5;
     
+    p = NULL;
+    printf("Hello\n");
+    if (p){
+        *p = 7;
+    }
+    
     /* What are in variables i and j here? */
 
     return 0;
