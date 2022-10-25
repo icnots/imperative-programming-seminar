@@ -1,6 +1,6 @@
 # imperative-programming-seminar
 
-Imperatív programozás gyakorlat
+Imperatív programozás gyakorlat 2022/2023 tanév őszi félév
 
 Órai feladatok:
 
@@ -14,4 +14,6 @@ Imperatív programozás gyakorlat
 
 
 Órai forráskódok elérhetőek az adott csoport megfelelő könyvtárában.
+
+A félévben egy évfolyam zárthelyi megírására kerül sor. Idén 2022. november 11-én 14:00-18:00 a zárthelyi időpontja a 4. és a 10. csoportnak is.
 
