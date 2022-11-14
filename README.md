@@ -12,6 +12,7 @@ Imperatív programozás gyakorlat 2022/2023 tanév őszi félév
 * [6. gyakorlat](exercises/06.md)
 * [7. gyakorlat](exercises/07.md)
 * [8. gyakorlat](exercises/08.md)
+* [9. gyakorlat](exercises/09.md)
 
 
 Órai forráskódok elérhetőek az adott csoport megfelelő könyvtárában.
