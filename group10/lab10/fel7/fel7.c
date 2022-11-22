@@ -17,7 +17,6 @@ int *feldolgoz(const char* filename, int *p, int *size, int *counter){
         
         if (fp){
             while ((fscanf(fp, "%d", &temp) != -1)){
-        printf("Hello %d\n", temp);
                 if (*size == localCounter){
                     *size *= 2;
                     p = (int *)realloc(p, *size * sizeof(int));
