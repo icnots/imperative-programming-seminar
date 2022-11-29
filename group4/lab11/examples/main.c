@@ -17,6 +17,16 @@ struct Example{
 
 typedef struct Example Example;
 
+typedef struct Valami{
+    int j;
+    int x;
+    struct Valami *k;
+} Valami;
+
+struct House{
+    int x;
+    int y;
+} house;
 
 enum MyEnum{
     EMPTY,
