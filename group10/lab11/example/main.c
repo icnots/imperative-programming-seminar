@@ -18,6 +18,12 @@ typedef union ExampleUnion{
     double d;
     float f;
     char c;
+    
+    struct Valami{
+        int a;
+        char c;
+    }valami;
+    
 }ExampleUnion;
 
 
@@ -28,7 +34,8 @@ enum ExampleEnum{
 };
 
 
-int main(){
+int main(){;
+
     ExampleStruct es = {9.7, 800, "Zoli", 'E'};
     ExampleStruct *p = &es;
     
