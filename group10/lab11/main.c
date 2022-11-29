@@ -33,4 +33,8 @@ int main(){
         printStudent(t[i]);
     }
     */
+    
+    for (int i = 0; i < length; i++){
+        free(t[i]);
+    }
 }
