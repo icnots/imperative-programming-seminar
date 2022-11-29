@@ -1,6 +1,7 @@
 #ifndef STUDENT_H_INCLUDED
 #define STUDENT_H_INCLUDED
 
+struct Student;
 
 enum Type{
     BSC,
@@ -8,20 +9,6 @@ enum Type{
     PHD
 };
 
-
-struct Student{
-    int id, age;
-    double av;
-    enum Type t;
-    union Data{
-        int cn;
-        double ci;
-        struct PHdData{
-            double impf;
-            int en;
-        }phd;
-    }data;
-};
 
 
 typedef enum Type Type;

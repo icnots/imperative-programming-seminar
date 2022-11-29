@@ -5,6 +5,20 @@
 
 
 
+struct Student{
+    int id, age;
+    double av;
+    enum Type t;
+    union Data{
+        int cn;
+        double ci;
+        struct PHdData{
+            double impf;
+            int en;
+        }phd;
+    }data;
+};
+
 Student *student_init(Type t){
     static int counter = 1000;
     Student *s =(Student *)malloc(sizeof(Student));
