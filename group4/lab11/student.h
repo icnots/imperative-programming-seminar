@@ -1,21 +1,11 @@
 #ifndef STUDENT_H_INCLUDED
 #define STUDENT_H_INCLUDED
 
-
 typedef enum Type{
     BSc,
     MSc,
     PhD
 }Type;
-
-typedef union Data{
-    int n;
-    double ci;
-    struct PhDData{
-        double impf;
-        int en;
-    }phdData;
-}Data;
 
 struct Student;
 

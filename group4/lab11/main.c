@@ -23,8 +23,6 @@ int main(){
     printf("data of max average Student:\n");
     printStudent(max);
 
-    printf("sizeof union: %ld\n", sizeof(Data));
-
     for (int i = 0; i < STUDENTSIZE; i++){
         free(s[i]);
     }

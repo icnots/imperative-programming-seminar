@@ -3,6 +3,18 @@
 #include <stdio.h>
 
 
+
+
+typedef union Data{
+    int n;
+    double ci;
+    struct PhDData{
+        double impf;
+        int en;
+    }phdData;
+}Data;
+
+
 struct Student{
     int id;
     int age;
