@@ -20,7 +20,8 @@ int main(){
     
     
     Student *max = maxAverage(s, STUDENTSIZE);
-    printf("id of max average Student: %d\n", max->id);
+    printf("data of max average Student:\n");
+    printStudent(max);
 
     printf("sizeof union: %ld\n", sizeof(Data));
 

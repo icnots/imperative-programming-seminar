@@ -3,6 +3,16 @@
 #include <stdio.h>
 
 
+struct Student{
+    int id;
+    int age;
+    double average;
+    Type t;
+    Data data;
+};
+
+
+
 Student *maxAverage(Student *students[], int length){
     Student *max = students[0];
     

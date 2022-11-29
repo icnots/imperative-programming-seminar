@@ -17,13 +17,7 @@ typedef union Data{
     }phdData;
 }Data;
 
-struct Student{
-    int id;
-    int age;
-    double average;
-    Type t;
-    Data data;
-};
+struct Student;
 
 typedef struct Student Student;
 
