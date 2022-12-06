@@ -8,9 +8,9 @@
 #define INPUTNUMBER 10
 
 // Reads a number from stdin and returns it in dynamic array
-char *getCharNumber();
+char *getCharNumber(void);
 // Returns zero as char array
-char *getZero();
+char *getZero(void);
 // Returns true if the parameter ch is a digit as character
 int isDigit(char ch);
 // Returns the pointer to the last digit of the parameter char array
@@ -99,7 +99,7 @@ char *plus(char *a, char *b){
     return first;
 }
 
-char *getCharNumber(){
+char *getCharNumber(void){
     char ch;
     int size = INITSIZE;
     int length = 0;
@@ -123,7 +123,7 @@ char *getCharNumber(){
     return p;
 }
 
-char *getZero(){
+char *getZero(void){
     char *p = (char *)malloc(2 * sizeof(char));
     pointerCheck(p);
     
