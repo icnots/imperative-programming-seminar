@@ -16,9 +16,13 @@ Imperatív programozás gyakorlat 2022/2023 tanév őszi félév
 * [10. gyakorlat](exercises/10.md)
 * [11. gyakorlat](exercises/11.md)
 * [12. gyakorlat](exercises/12.md)
+* [13. gyakorlat](exercises/13.md)
 
 
 Órai forráskódok elérhetőek az adott csoport megfelelő könyvtárában.
 
-A félévben egy évfolyam zárthelyi megírására kerül sor. Idén 2022. november 11-én 14:00-18:00 a zárthelyi időpontja a 4. és a 10. csoportnak is.
+A félévben egy évfolyam zárthelyi megírására kerül sor.
+
+A beadandó feladat várható határideje 2024. január 2. 23:59. A kiírásának várható ideje 2023. december 11.
+
 
