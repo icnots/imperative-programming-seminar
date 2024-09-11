@@ -4,10 +4,14 @@ Imperatív programozás gyakorlat 2024/2025 tanév őszi félév
 
 Órai feladatok:
 
-* [1. gyakorlat](exercises/01.md)
+* [1. gyakorlat](exercises/gyak01.md)
 
 
 Órai forráskódok elérhetőek az órék után az adott csoport megfelelő könyvtárában.
+
+Hasznos linkek:
+* [A tárgy hivatalos honlapja](http://kto.web.elte.hu/hu/oktatas/imp/)
+* [Porkoláb Zoltán: Imperatív programozás. Jegyzetek az előadáshoz](http://gsd.web.elte.hu/imper/)
 
 A félévben egy évfolyam zárthelyi megírására kerül sor várhatóan a vizsgaidőszak elején.
 
