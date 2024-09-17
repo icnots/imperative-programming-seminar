@@ -3,7 +3,7 @@
 ## Alaptípusok, vezérlési szerkezetek
 
 ***Emlékeztető:*** Fordítás közben használd a **-W, -Wall, -Wextra, -pedantic** kapcsolókat!
-
+***Segítség:*** [Az újdonságok a mai feladatsorból](./demo02.md)
 
 ### Kötelező feladatok
 
@@ -12,9 +12,11 @@
 > - Próbáld ki mi történik, ha használod a változó előtt a `const` kulcsszót
 3. Írj programot, amely egy számot kér a felhasználótól ( pl `scanf()`-el beolvasva a billentyűzetről ), de csak páratlant fogad el. Addig várakozik bemenetre, amíg megfelelő értéket nem kap.
 4. Próbálj meg értékül adni az `int` típusú változónak egy valós számot, egy karaktert, egy logikai ( `bool` ) értéket, és egy karakter láncot (*stringet*). Ha sikerül az értékadás, akkor írd ki a változó értékét.
+> - A `bool` típus csak C99 szabvány óta létezik, az `stdbool.h` könyvtár használatával érhető el. Ennél a feladatnál nyugodtan lehet használni azt, hogy konkrét feltételt írsz be, pl.: `0<1`.
 5. Határozd meg két szám átlagát. Figyelj arra, hogy az eredmény valós szám!
 6. Írd ki 0-tól 1-ig a valós számokat 0.1-es lépésközzel.
-7. Határozd meg, hogy melyik a legnagyobb és legkisebb ábrázolható egész szám ( `sizeof()` ). A legnagyobb ábrázolható egész számot tedd egy változóba, majd adj a változóhoz 1-et. Figyeld meg mi lett az eredmény!
+7. Határozd meg, hogy melyik a legnagyobb és legkisebb ábrázolható egész szám `int` típus esetén ( `sizeof()` )! A legnagyobb ábrázolható egész számot tedd egy változóba, majd adj a változóhoz 1-et. Figyeld meg mi lett az eredmény!
+> - Ötlet: Írj loop-ot, amely addig növel egy `int` változót, amíg az nagyobb lesz.
 > - Egyes Linux rendszereken a `math.h` könyvtár függvényeinek használata problémás lehet, mert a linker nem találja meg a referenciákat. A fordításkor a parancs végén a **-lm** kapcsolóval orvosolható a probléma a linker megfelelően fog működni.
 
 
