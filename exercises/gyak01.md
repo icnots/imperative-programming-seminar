@@ -2,6 +2,7 @@
 
 ## Bevezetés
 
+* (Segítség, amennyiben megoldottad már a feladatokat.)[exercises/demo01.md]
 
 ### Kötelező feladatok
 

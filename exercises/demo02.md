@@ -82,7 +82,7 @@ Addig fut a törzse, amíg a feltétel igaz. Az első lefutás után vizsgálja 
 ```
 do {
     /* loop törzse */
-} while (0 < 1) /* 0 < 1 helyén a feltétel */
+} while (0 < 1); /* 0 < 1 helyén a feltétel */
 ```
 
 ## Beépített operátor
