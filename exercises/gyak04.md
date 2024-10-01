@@ -3,9 +3,11 @@
 ## Aritmetikai és bit műveletek, operátorok
 
 ***Emlékeztető:*** 
-- Fordítás közben használd a **-W, -Wall, -Wextra, -pedantic** kapcsolókat!
+- Fordítás közben használd a **-W -Wall -Wextra -pedantic** kapcsolókat!
 - Az egyes feladatokat szervezzük ki saját alprogramba!
-- Használjuk segítségnek a hivatalos dokumentációt is: [C reference](https://en.cppreference.com/w/c)
+- Használjuk segítségnek a hivatalos dokumentációt is: [C reference](https://en.cppreference.com/w/c) Ezt lehet használni majd a vizsgán is.
+
+[Új részek, amiket lehet használni a megoldáshoz.](./demo04.md)
 
 ### Kötelező feladatok
 
@@ -18,7 +20,7 @@
 >   - ***haladó szint:*** `EOF` használatával (linuxban: **Ctrl+D**; windowsban: **Ctrl+Z** (**Enter**) ) 
 3. Olvass be két számot, és végezd el rajtuk az összes lehetséges aritmetikai műveletet!
 4. Olvasd be egy kör sugarát, és számold ki a kör átmérőjét, kerületét és területét!
-5. Olvass be egy dátumot pozitív egész számként (egybeirva!), majd írd ki valamilyen dátum formátumban (év. hónap. nap. / DD-MM-YYYY / ...)!
+5. Olvass be egy dátumot pozitív egész számként (egybeirva!), majd írd ki valamilyen dátum formátumban (év. hónap. nap. vagy DD-MM-YYYY vagy ...)!
 6. Állapítsd meg 2-2 koordináta-rendszerbeli pontról, hogy az általuk alkotott egyenesek merőlegesek-e egymásra!
 7. Olvass be két számot egy-egy változóba, és csak aritmetikai műveletek segítségével cseréld meg őket!
 8. Fordítsd meg egy szám bitjeit! Mi lesz az eredmény?
