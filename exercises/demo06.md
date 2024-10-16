@@ -45,7 +45,7 @@ Amennyiben egy pointerre akarunk mutatni egy pointerrel, akkor több `*` haszná
     int **pp;
     
     p = &i;
-    pp = &pp;
+    pp = &p;
     /* "*p típusa: int" */
     /* "*pp típusa: int *" */
 ```
