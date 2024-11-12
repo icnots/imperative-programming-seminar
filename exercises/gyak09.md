@@ -5,7 +5,9 @@
 ***Emlékeztető:***
 - Fordítás közben használd a **-W -Wall -Wextra -pedantic** kapcsolókat!
 - A feladatokat headerekre és forrásfájlokra tagolva oldjuk meg!
-- Segédlet a fájlokra tagoláshoz és fordításhoz: [Fájlok](./demo09.md)
+- Segédlet a fájlokra tagoláshoz és fordításhoz: [Modulok](./demo09a.md)
+- A karaktertömbök (string-ek) kezeléséhez a `string.h` könyvtárat fogjuk használni, amely elérhető itt: [C reference](https://en.cppreference.com/w/c)
+- Segédlet a fájlok olvasására és írására: [Fájlkezelés](./demo09b.md)
 
 ### Kötelező feladatok
 
