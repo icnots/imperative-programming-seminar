@@ -6,17 +6,18 @@
 - Fordítás közben használd a **-W -Wall -Wextra -pedantic** kapcsolókat!
 - A feladatokat headerekre és forrásfájlokra tagolva oldjuk meg!
 - Segédlet a fájlokra tagoláshoz és fordításhoz: [Modulok](./demo09a.md)
-- A karaktertömbök (string-ek) kezeléséhez a `string.h` könyvtárat fogjuk használni, amely elérhető itt: [C reference](https://en.cppreference.com/w/c)
+- A karaktertömbök (string-ek) kezeléséhez a `string.h` és a `ctype.h` könyvtárakat fogjuk használni, amelyek elérhetőek itt: [C reference](https://en.cppreference.com/w/c)
 - Segédlet a fájlok olvasására és írására: [Fájlkezelés](./demo09b.md)
+- Segédlet a parancssori argumentumok kezelésére: [Parancssori argumentumok](./demo09c.md)
 
 ### Kötelező feladatok
 
 0. Készíts a main-ben egy menüt, melyben külön menüpontok alá tudod elhelyezni a megírandó feladatok alprogramjait. A felhasználó parancssori argumentum segítségével tudja indítani a kívánt programot.
-1. Írj programot, amely beolvas egy stringet a standard inputról, és megszámolja benne a karakterek és a szavak számát! A beolvasáshoz használd az `fgets` függvényt.
-2. Írj programot, amely beolvas két karaktertömböt, és összehasonlítja az előzővel (abc sorrend szerint)! A feladatot végezd el beépített művelettel a `string.h` könyvtárból.
-3. Másold le az előző stringet egy harmadik stringbe! A feladatot végezd el beépített művelettel.
+1. Írj programot, amely beolvas egy karaktertömböt a standard inputról, és megszámolja benne a karakterek és a szavak számát! A beolvasáshoz használd az `fgets` függvényt.
+2. Írj programot, amely beolvas két karaktertömböt, és összehasonlítja az előzővel (abc sorrend szerint)! A feladatot végezd el beépített művelettel a `string.h` könyvtárból (`strcmp`).
+3. Másold le egy beolvasott karaktertömböt egy másik karaktertömbbe! A feladatot végezd el beépített művelettel (`strcpy`).
 4. Hozz létre egy stringet karakterek tömbjeként és egyet pointerként! Próbálj meg kicserélni mindkét változatban egy-egy karaktert! Mi a különbség a kettő között?
-5. Hozz létre egy szöveges fájlt tetszőleges szöveggel. Írj programot, amelyben megnyitod a fájlt az `fopen` függvény segítségével, és olvasd be a fájl tartalmát az `fgets` függvény meghívásával. A beolvasott szöveget konvertáld csupa nagybetűssé, és írd ki a nagybetűs szöveget a standard inputra! A beolvasás után zárd be a fájlt az `fclose` függvénnyel.
+5. Hozz létre egy szöveges fájlt tetszőleges szöveggel. Írj programot, amelyben megnyitod a fájlt az `fopen` függvény segítségével, és olvasd be a fájl tartalmát az `fgets` függvény meghívásával. A beolvasott szöveget konvertáld csupa nagybetűssé, és írd ki a nagybetűs szöveget a standard outputra! A beolvasás után zárd be a fájlt az `fclose` függvénnyel.
 6. Egészítsd ki az előző feladatot úgy, hogy a nagybetűs szöveget nem a standard inputra írod ki, hanem egy másik fájlba, az `fprintf` függvény segítségével. Az új fájl létrehozásához is használd az `fopen` függvényt.
 
 
