@@ -13,7 +13,7 @@
 
 0. Készíts a main-ben egy menüt, melyben külön menüpontok alá tudod elhelyezni a megírandó feladatok alprogramjait. A felhasználó parancssori argumentum segítségével tudja indítani a kívánt programot.
 1. Írj programot, amely beolvas egy stringet a standard inputról, és megszámolja benne a karakterek és a szavak számát! A beolvasáshoz használd az `fgets` függvényt.
-2. Írj programot, amely beolvas egy második stringet, és összehasonlítja az előzővel! A feladatot végezd el beépített művelettel a `string.h` könyvtárból.
+2. Írj programot, amely beolvas két karaktertömböt, és összehasonlítja az előzővel (abc sorrend szerint)! A feladatot végezd el beépített művelettel a `string.h` könyvtárból.
 3. Másold le az előző stringet egy harmadik stringbe! A feladatot végezd el beépített művelettel.
 4. Hozz létre egy stringet karakterek tömbjeként és egyet pointerként! Próbálj meg kicserélni mindkét változatban egy-egy karaktert! Mi a különbség a kettő között?
 5. Hozz létre egy szöveges fájlt tetszőleges szöveggel. Írj programot, amelyben megnyitod a fájlt az `fopen` függvény segítségével, és olvasd be a fájl tartalmát az `fgets` függvény meghívásával. A beolvasott szöveget konvertáld csupa nagybetűssé, és írd ki a nagybetűs szöveget a standard inputra! A beolvasás után zárd be a fájlt az `fclose` függvénnyel.
