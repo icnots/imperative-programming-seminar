@@ -16,7 +16,7 @@ Imperatív programozás gyakorlat 2024/2025 tanév őszi félév
 * [10. gyakorlat](exercises/gyak10.md)
 
 
-Órai forráskódok elérhetőek az órék után az adott csoport megfelelő könyvtárában.
+Órai forráskódok elérhetőek az órák után az adott csoport megfelelő könyvtárában.
 
 Hasznos linkek:
 * [A tárgy hivatalos honlapja](http://kto.web.elte.hu/hu/oktatas/imp/)
