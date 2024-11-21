@@ -19,8 +19,11 @@ Imperatív programozás gyakorlat 2024/2025 tanév őszi félév
 Órai forráskódok elérhetőek az órák után az adott csoport megfelelő könyvtárában.
 
 Hasznos linkek:
-* [A tárgy hivatalos honlapja](http://kto.web.elte.hu/hu/oktatas/imp/)
+* [Imperatív prgramozás](http://kto.web.elte.hu/hu/oktatas/imp/): A tárgy hivatalos honlapja
+* [InfoC](https://infoc.eet.bme.hu/): BME-s tárgy a C programozási nyelvről
 * [Porkoláb Zoltán: Imperatív programozás. Jegyzetek az előadáshoz](http://gsd.web.elte.hu/imper/)
+* [Korábbi évek anyaga](./arch/)
+* [Demó leírások az órákhoz](./exercises/demos.md)
 
 A félévben egy évfolyam zárthelyi megírására kerül sor várhatóan a vizsgaidőszak elején.
 
