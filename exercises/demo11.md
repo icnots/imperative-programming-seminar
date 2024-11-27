@@ -103,3 +103,27 @@ int main(void){
     return 0;
 }
 ```
+
+
+### `typedef`
+
+A kényelem érdekében a típusokat elláthatjuk egyszavas névvel is, amelyet a `typedef` paranccsal tehetünk meg:
+A `struct Example1` osztálynak az elnevezése `Example` névre a következő kóddal tehető meg:
+```C
+typedef struct Example1 Example;
+```
+Innentől kezdve hozhatunk létre `Example` típusú változókat is.
+
+## Random számok
+Definiáljunk egy függvényt, ami `from` és `to` egészek közt készít random számot (a határokat is beleértve:
+```C
+int getRandom(int from, int to){
+    return rand() % (to - from + 1) + from;
+}
+```
+
+A seed-elés egyszer történjen meg a program futása során! Így általában a `main` függvénybe rakjuk be:
+```C
+    srand(time(NULL));
+```
+Ehhez kell a `stdlib.h` és a `time.h` include-ja is!

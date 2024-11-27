@@ -6,11 +6,11 @@
 - Fordítás közben használd a **`-W -Wall -Wextra -pedantic`** kapcsolókat!
 - A feladatokat headerekre és forrásfájlokra tagolva oldjuk meg!
 - [Összetett adatszerkezetekhez segédlet](./demo11.md)
+- [C reference](https://en.cppreference.com/w/c)
 
 ### Kötelező feladatok
 
 #### I. Összetett adatok kezelése
-> Ezt a feladatrészt a `first.c` és `first.h` fájlokban oldjuk meg, amelyet a `main.c`-ben lévő főprogramból (`main`-ből) hívunk meg.
 1. Készítsünk két tömböt, amelyekben `STUD_CNT` számú hallgató adatait szeretnénk tárolni. Írjuk egy inicializáló függvényt, ami ezt a két tömböt feltölti random adatokkal. Definiáljuk makróban a `STUD_CNT` számot.
    * Az egyik tömb a hallgatóknak egy egyedi azonosítóját tárolja `int` típussal
    * A másik tömb pedig a hallgató tanulmányi átlagát tárolja `double` típussal
@@ -18,7 +18,6 @@
 3. Mi történne akkor, ha a későbiekben további adatokat kellene támogatnunk?
 
 #### II. Struktúra bevezetése és használata
-> Ez a feladatrész legyen a `second.c` és `second.h` fájlokban megoldva.
 1. Hozzunk létre egy új típust `Student` néven, mellyel hallgatókat fogunk reprezentálni. Tartalmazza a korábbi azonosítót, átlagot és kort is. Vizsgáljuk meg a memóriaszükségletét a típusnak, kísérletezzünk az adattagok sorrendjével, és figyeljük meg ennek hatását.
 2. A praktikusság jegyében hozzunk létre egy alias típust `typedef` fel, hogy a típust tudjuk a `struct` előtag nélkül is használni.
 3. Készítsünk egy olyan függvényt (`student_init`), amely minden hívás alkalmával létrehoz egy random adatokkal feltöltött `Student` példányt (Az elkészült példányra mutató pointerrel tér vissza).
@@ -26,7 +25,6 @@
 5. Hozzunk létre egy függvényt (`student_search`) mely egy `Student` példányokat tároló tömböt kap és visszaadja a legmagasabb átlagú hallgatót.
 
 #### III. Struktúra továbbfejlesztése
-> A következő feladatrészt a `third.h` és `third.c` fájlokra tagolva oldjuk meg.
 1. A `Student` struktúra mintájára, hozzunk létre egy `AdvStudent` struktúrát, amelyben külön tudjuk kezelni a BSc-s, MSc-s és PhD-s hallgatókat. Erre hozzunk létre egy felsoroló típust (`enum`) `Type` néven és adjuk hozzá a struktúrához új adattagként.
 2. A hallgató típusától függően tároljunk különböző plusz adatokat egy `union` típus segítségével.
 
