@@ -10,3 +10,4 @@
 1. [Fájlkezelés](./demo09b.md)
 1. [Parancssori argumentumok kezelése](./demo09c.md)
 1. [Dinamikus memóriakezelés](./demo10.md)
+1. [Összetett adatszerkezetek](./demo11.md)
