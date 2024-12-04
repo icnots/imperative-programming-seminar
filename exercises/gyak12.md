@@ -13,7 +13,7 @@
 2. Hozzunk létre egy globális pointer változót a Box struktúrából (`top`). Írjuk meg az `initialize()` függvényt, amely `NULL`ra állítja a top változót. A `main()` függvényben hívjuk meg az `initialize()`-t!
 3. Írjuk meg az `is_empty()` függvényt, amely visszaadja, hogy üres-e a stack vagy sem. (A stack akkor üres, ha a top változó `NULL` pointer.)
 4. Írjuk meg a `peek()` függvényt, ami a jelenlegi legfelső Box súlyával tér vissza. (Ne feledkezzünk meg arról az esetről, amikor a stack üres!)
-5. Írjuk meg a `push()` függvényt, ami egy egész számot kap paraméterül, ez lesz a következő doboz súlya. Hozzunk létre egy új elemet a stacken, és állítsuk be a súlyát. Az új elem next adattagja az előző adattagra mutasson! A top változó mutasson az új elemre.
+5. Írjuk meg a `push()` függvényt, ami egy egész számot kap paraméterül, ez lesz a következő doboz súlya. Hozzunk létre egy új elemet a heap-en, és állítsuk be a súlyát. Az új elem `next` adattagja az előző adattagra mutasson! A `top` változó mutasson az új elemre.
 6. Írjuk meg a `pop()` függvényt, ami felszabadítja a verem tetején lévő elemet, és a top változót az eggyel alatta lévőre állítja. (Ne feledkezzünk meg az üres stack lehetőségéről sem!)
 7. Írjuk meg a `copy_top()` függvényt, amely lemásolja a verem legfelső elemét, és a verem tetejére helyezi a másolatot. Nézzük meg, mi történik, ha csak a legfelső elemre mutató pointert másoljuk le, illetve ha új memóriaterületet allokálunk a másolatnak, és adattagonkénti másolást végzünk!
 
