@@ -13,7 +13,8 @@ A gyakorlaton a tavalyi év közbeni ZH megoldása lesz kicsit átírva. A taval
 - A kígyó szegmenseinek reprezentálására használhatsz `struct`-ot
 - A pálya dimenziót parancssori argumentumokban adjuk meg (tetszőleges méret lehet, de legyen azért értelmes méret, (pl. 3 < méret < 1000 minden oldalra))
 - A begyűjtendő almák száma legyen a pálya méretének valamilyen függvénye, esetleg valami nehézség értéktől is függhet (pl.: Az összmezőszám 5%-a felfelé kerekítve)
-
+- Hozz létre struktúrát ott, ahol logikusnak tartod. (Amikor mátrixot kell átadni paraméterül a dimenzióival együtt, létrehozhatsz egy struktúrát hozzá és azt adod át.)
+- A kígyó mérete a játék során változik, ekkor update-eld a hosszt és megfelelően kezeld a memóriát.
 
 ---
 
@@ -27,27 +28,31 @@ Készítsd el a Snake játék leegyszerűsített verzióját! A játékos lépé
 ## Kötelezően megvalósítandó alprogramok
 
 ### Játéktér inicializálása – `init_field()` (7 pont)
-- A játékteret egy **`height` x `width` karaktereket tároló "kétdimenziós" tömb** reprezentálja (ez legyen egy sorfolytonos egydimenziós tömbként létrehozva a memóriában.
+- A játékteret egy **`height` x `width` karaktereket tároló "kétdimenziós" tömb** reprezentálja (ez legyen egy sorfolytonos egydimenziós tömbként létrehozva a memóriában).
+- A feladatleírás szerint a `height` és a `width` paraméterei a játéktérnek parancssori argumentumként érkeznek. (Pl. `atoi` vagy `sscanf` segítségével alakítsd át `int`-re.)
 - Helyezz el véletlenszerűen megfelelő számú almát a játéktéren! Ügyelj, hogy minden alma külön mezőre kerüljön. (Megfelelő szám pl.: 5%-a a mezők számának felfelé kerekítve.)
 - Üres mező: `' '` (SPACE), alma: `'a'`.
 - A függvény paraméterei:
-  - A játékteret tároló mátrix.
-  - Az almák száma.
+  - A játékteret tároló mátrix (és a dimenziói).
+  - Az almák száma. (Ha a méretből egyértelműen következik az almák száma, akkor ezt kihagyhatod.)
 
 ### Kígyó inicializálása – `init_snake()` (5 pont)
-- A kígyó kezdetben legyen 5 egység hosszú és egy a koordinátáit egy külön erre a célra létrehozott `struct`-okból álló tömbben tárold.
-- A kígyó mérete a játék során változik, ekkor update-eld a hosszt és megfelelően kezeld a memóriát.
+- A kígyó kezdetben legyen 5 egység hosszú. A koordinátákat kétféle módon tárolhatod:
+  - Egy külön erre a célra létrehozott `struct`-okból álló tömbben **VAGY**
+  - Egy a sorfolytonos tömbbeli koordinátákat tároló `int`-ekből álló tömbben.
 - Kezdő pozíciók érvényesek legyenek! (Ha nincs más ötleted, az első sor első 5 eleme legyen. Ebben az esetben úgy legyenek a feltételek megadva a tábla méretére, hogy azok ehhez illeszkedjenek!)
 - (Nem kell figyelni az almák helyzetére, az nem probléma, ha véletlenül pont rákerül a kígyó egy-egy szegmense az almára!)
 - A függvény paramétere:
-  - A kígyót tároló mátrix.
+  - A kígyót tároló tömb,
+  - A kígyó hossza (ezt ez a függvény állítsa be, így megfelelő módon add át paraméterül).
 
 ### Játék aktuális állapotának kirajzolása – `print_game()` (11 pont)
 - Vizualizáció: másold le a játéktér mátrixot egy **munka mátrixra**.
 - A kígyó fejét jelöld: `'8'`, testét: `'0'`.
 - Rajzold ki a játékteret kerettel (`'#'`) és sarkokkal!
 - A függvény paraméterei:
-  - A játékteret és a kígyót tároló mátrix.
+  - A játékteret tároló mátrix és dimenziói,
+  - A kígyót tároló tömb és a hossza.
 
 ### Kígyó frissítése – `update_snake()` (17 pont)
 - Frissítsd a kígyó testének koordinátáit.
@@ -58,7 +63,9 @@ Készítsd el a Snake játék leegyszerűsített verzióját! A játékos lépé
   - Egyéb eset (0).
 - Vezérlő karakterek: `'a'` (balra), `'s'` (lefelé), `'w'` (felfelé), `'d'` (jobbra).
 - A függvény paraméterei:
-  - A játékteret, a kígyót tároló mátrix, az elmozdulás iránya (karakter).
+  - A játékteret tároló mátrix és dimenziói,
+  - A kígyót tároló tömb és hossza, (A hossz és a kígyót tároló tömb is update-elhetőként legyen átadva!)
+  - Az elmozdulás iránya (karakter).
 
 ### Főprogram – `main()` (10 pont)
 - Köszöntsd a játékost, és ismertesd a játékszabályokat röviden!
