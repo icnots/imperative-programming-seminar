@@ -8,7 +8,7 @@ Ennek könyvtárnak teljes elérési útjának kiírásához a `pwd` parancsot h
 
 ### Adott könyvtár tartalmának listázása
 Az adott könyvtárunk tartalmának kiírásához az `ls` parancsot használjuk.
-Ennek különböző kapcsolóit néztük meg:
+Ennek különböző kapcsolóit néztük meg:o
 * `ls -l`: hosszabb formában írja ki a mappa tartalmát, jogosultságokkal, létrehozási dátumokkal együtt
 * `ls -a`: minden "el-hide-olt" mappát is kiír:
   * `./`: az aktuális mappára mutat, ezzel tudunk saját programot futtatni, amely nincs hozzáadva az operációs rendszer parancsaihoz
