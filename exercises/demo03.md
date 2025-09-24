@@ -31,90 +31,120 @@ A prefix inkrementáló operátor a növelés előtti értékkel tér vissza:
 
 ## Beolvasás karakterenként
 
-A `scanf` függvény mellett megismerkedünk a karakterenként olvasással. Erre a `getchar` függvényt használjuk, amely az `stdin` pufferből (a billentyűzetről beírt karakterek) tér vissza sorban. Amikor entert ütünk, a begépelt sor kerül a pufferbe, és innen adja vissza a `getchar` függvény a karaktereket egyenként.
+A `scanf` függvény mellett megismerkedünk a karakterenkénti beolvasással is. Ez sokszor hasznos, mert így pontosan ellenőrizhetjük, hogy milyen karakterek érkeznek a bemenetről, és jobban kézben tarthatjuk a hibás inputok kezelését.  
 
-Pl. egy olyan program, ami a 0 karakter ütéséig kiírja a beütött karaktereket az ASCII kódjukkal együtt.
-```
-    char ch;
-    while ((ch = getchar())){
-        printf("'%c' - %d\n", ch, ch);
-    }
-```
+Erre a `getchar` függvényt használjuk, amely az `stdin` pufferből tér vissza sorban a karakterekkel. Amikor entert ütünk, a begépelt sor kerül a pufferbe, és innen adja vissza a `getchar` a karaktereket egyenként – beleértve az újsor (`'\n'`) karaktert is.  
 
-### Beolvasás egész számot karakterenként
-Ebben a részben egy olyan alprogramot hozunk létre, amely a legközelebbi egész számot olvassa be az `stdin` bemenetről.
-A felhasználó által beírt karakterek bekerülnek egy `stdin` nevű streambe. Ez azt jelenti, hogy amikor olvasunk a `stdin`-ről, akkor sorban fogjuk kapni a `getchar()` függvénnyel a karaktereket, amelyeket beírt.
+Például készíthetünk egy olyan programot, amely a `'0'` karakter beírásáig kiírja a beütött karaktereket az ASCII kódjukkal együtt:
 
-Létrehozunk egy metódust, amely a paraméterül kapott karakterről eldönti, hogy számjegy-e vagy nem.
-```
-int isDigit(char ch){
+```c
+char ch;
+while ((ch = getchar()) != '0') {
+    printf("'%c' - %d\n", ch, ch);
+}
+````
+
+---
+
+## Beolvasás egész számot karakterenként
+
+Ebben a részben egy olyan függvényt hozunk létre, amely a következő egész számot olvassa be a szabványos bemenetről (`stdin`).
+
+A `getchar()` hívásokkal sorban kapjuk meg a felhasználó által begépelt karaktereket. Először szükségünk lesz egy segédfüggvényre, amely eldönti egy karakterről, hogy számjegy-e vagy sem:
+
+```c
+int isDigit(char ch) {
     return '0' <= ch && ch <= '9';
 }
 ```
 
-Amikor a számot akarjuk beolvasni, addig olvasunk, amíg számjegyet vagy `'-'` karaktert nem olvasunk (negatív számok miatt).
-```
+(A C szabványos könyvtárában egyébként létezik `isdigit` függvény a `<ctype.h>` headerben, de itt most saját verziót írunk.)
+
+---
+
+### Első számjegy megtalálása
+
+Amikor számot akarunk beolvasni, addig kell olvasni a karaktereket, amíg számjegyet vagy egy `'-'` jelet nem találunk (utóbbit a negatív számok miatt engedjük):
+
+```c
 char ch;
 ch = getchar();
-while (!isDigit(ch) && ch != '-'){
+while (!isDigit(ch) && ch != '-') {
     ch = getchar();
 }
 ```
-Miután ez a rész lefutott, biztosak lehetünk benne, hogy a ch-ban vagy egy `'-'` karakter vagy egy számjegy van.
-Negatív szám esetére létrehozunk egy elágazást, ami eldönti, hogy negatív számról van-e szó. Ha negatív, akkor elmentjük ezt az információt és eggyel tovább olvasunk:
-```
+
+Miután ez a rész lefutott, biztosak lehetünk benne, hogy a `ch` változóban vagy egy `'-'` jel, vagy egy számjegy van.
+
+---
+
+### Negatív számok kezelése
+
+Ha `'-'` jelet találtunk, akkor elmentjük az előjelet, és továbbolvasunk. Ha közvetlenül utána nem számjegy jön, az hibás formátumot jelent:
+
+```c
 int sign = 1;
-if (ch == '-'){
+if (ch == '-') {
     sign = -1;
     ch = getchar();
-    /*Ha most nem számjegy következik, akkor rossz számformátumot írtak be.*/
-    if (!isDigit(ch)){
-        printf("Invalid number");
-        return 0;
+    /* Ha most nem számjegy következik, akkor rossz számformátumot írtak be. */
+    if (!isDigit(ch)) {
+        printf("Invalid number\n");
+        return 0; /* Jobb lenne hibakódot visszaadni vagy kilépni. */
     }
 }
 ```
-Különben pedig mehet az értékek beolvasása:
-```
-int value = ch - '0'; /*Mivel sorrendben vannak a számjegyek, a '0' értékét kivonva magát az értéket kapjuk.*/
+
+---
+
+### Számjegyek összerakása
+
+Ezután következik a számjegyek feldolgozása. A `'0'` kivonása egy karakterből megadja a megfelelő numerikus értéket (pl. `'7' - '0' = 55 - 48 = 7`):
+
+```c
+int value = ch - '0';
 ch = getchar();
-while (isDigit(ch)){
+while (isDigit(ch)) {
     value *= 10;
     value += ch - '0';
+    ch = getchar();
 }
 return sign * value;
 ```
 
-Egybemásolva a programot: (Vegyük észre, hogy ez majdnem ugyanúgy használható mint a `scanf` esetében volt, csak itt visszatérési értékként kapjuk a beolvasott számot, nem egy változóba rakja bele. Így csak egyetlen számot lehet egyszerre beolvasni, de egy elválasztó nem-szám karakter után ismét olvashatunk be más egész számot.)
-```
+---
+
+## Teljes program
+
+Az alábbi teljes példában a `readInt` függvény egyszerre egy egész számot olvas be a szabványos bemenetről. Hibás formátum esetén `0`-val tér vissza, de a gyakorlatban érdemes lenne hibakódot vagy más jelzést használni.
+
+```c
 #include <stdio.h>
 
-
-int isDigit(char ch){
+int isDigit(char ch) {
     return '0' <= ch && ch <= '9';
 }
 
-int readInt(){
+int readInt() {
     char ch;
     ch = getchar();
-    while (!isDigit(ch) && ch != '-'){
+    while (!isDigit(ch) && ch != '-') {
         ch = getchar();
     }
 
     int sign = 1;
-    if (ch == '-'){
+    if (ch == '-') {
         sign = -1;
         ch = getchar();
-        /*Ha most nem számjegy következik, akkor rossz számformátumot írtak be.*/
-        if (!isDigit(ch)){
-            printf("Invalid number");
+        if (!isDigit(ch)) {
+            printf("Invalid number\n");
             return 0;
         }
     }
 
-    int value = ch - '0'; /*Mivel sorrendben vannak a számjegyek, a '0' értékét kivonva magát az értéket kapjuk.*/
+    int value = ch - '0';
     ch = getchar();
-    while (isDigit(ch)){
+    while (isDigit(ch)) {
         value *= 10;
         value += ch - '0';
         ch = getchar();
@@ -122,8 +152,7 @@ int readInt(){
     return sign * value;
 }
 
-
-int main(){
+int main() {
     int a = readInt();
     int b = readInt();
 

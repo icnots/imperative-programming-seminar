@@ -1,31 +1,29 @@
 #include <stdio.h>
 
-
-int isDigit(char ch){
+int isDigit(char ch) {
     return '0' <= ch && ch <= '9';
 }
 
-int readInt(){
+int readInt() {
     char ch;
     ch = getchar();
-    while (!isDigit(ch) && ch != '-'){
+    while (!isDigit(ch) && ch != '-') {
         ch = getchar();
     }
 
     int sign = 1;
-    if (ch == '-'){
+    if (ch == '-') {
         sign = -1;
         ch = getchar();
-        /*Ha most nem számjegy következik, akkor rossz számformátumot írtak be.*/
-        if (!isDigit(ch)){
-            printf("Invalid number");
+        if (!isDigit(ch)) {
+            printf("Invalid number\n");
             return 0;
         }
     }
 
-    int value = ch - '0'; /*Mivel sorrendben vannak a számjegyek, a '0' értékét kivonva magát az értéket kapjuk.*/
+    int value = ch - '0';
     ch = getchar();
-    while (isDigit(ch)){
+    while (isDigit(ch)) {
         value *= 10;
         value += ch - '0';
         ch = getchar();
@@ -33,8 +31,7 @@ int readInt(){
     return sign * value;
 }
 
-
-int main(){
+int main() {
     int a = readInt();
     int b = readInt();
 
