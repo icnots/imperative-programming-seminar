@@ -21,7 +21,7 @@
 
 ### Opcionális feladatok
 
-1. Kitalálós játék (guessing): Mindaddig olvass be egy számot a felhasználótól, míg az nem egyezik a programban megadottal (először lehet beégetett konstans (`const`) vagy `#define`, de később használj véletlenszerű értéket). Hibás tipp esetén segíts, hogy túl kicsi vagy túl nagy volt-e a tipp. 
+1. Kitalálós játék (guessing): Mindaddig olvass be egy számot a felhasználótól, míg az nem egyezik a programban megadottal (először lehet beégetett konstans vagy `#define`, de később használj véletlenszerű értéket). Hibás tipp esetén segíts, hogy túl kicsi vagy túl nagy volt-e a tipp. 
 > - Többféle ciklussal is próbálj megoldást adni
 > - Próbáld ki hogyan helyettesíthetőek az `if` utasítások a '`?`' operátorral
 2. Egészítsd ki a guessing programot a hibás próbálkozások számlálásával, majd ennek értéke alapján adj szöveges értékelést!
