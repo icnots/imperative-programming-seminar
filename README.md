@@ -9,6 +9,7 @@ Imperatív programozás gyakorlat 2025/2026 tanév őszi félév.
 * [3. gyakorlat](exercises/gyak03.md)
 * [4. gyakorlat](exercises/gyak04.md)
 * [5. gyakorlat](exercises/gyak05.md)
+* [6. gyakorlat](exercises/gyak06.md)
 
 
 Órai forráskódok elérhetőek az órák után az adott csoport megfelelő könyvtárában.
