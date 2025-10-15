@@ -22,7 +22,7 @@ int main(){
     p = &j;
     *p = 6;
     int **pp = &p;
-    *pp = t+1; /* *pp = &t[1]; */
+    *pp = t+1; // ugyanaz mint ez a sor: pp[0] = &t[1];
     *(pp[0]+1) = 7;
     pp[0][-1] = 8;
     **pp = 9;
