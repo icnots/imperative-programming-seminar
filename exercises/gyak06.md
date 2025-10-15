@@ -5,6 +5,33 @@
 ***Emlékeztető:*** 
 - Fordítás közben használd a **-W -Wall -Wextra -pedantic** kapcsolókat!
 - Használjuk segítségnek a hivatalos dokumentációt is: [C reference](https://en.cppreference.com/w/c)
+- Pointerekről összefoglaló: [Pointerek](./demo06.md)
+
+### Demó feladat
+Rajzoljunk memóriatérképet (memory map) a következő kódhoz:
+```
+#include <stdio.h>
+
+int main(){
+    int t[] = {1, 2, 3};
+    int *p = t;
+    int j = 5;
+    p++;
+    p += 1;
+    *p = 4;
+    p = &j;
+    *p = 6;
+    int **pp = &p;
+    *pp = t+1;
+    *(pp[0]+1) = 7;
+    pp[0][-1] = 8;
+    **pp = 9;
+    
+    printf("t: [%d, %d, %d]\nj : %d\n", t[0], t[1], t[2], j);
+    
+    return 0;
+}
+```
 
 ### Kötelező feladatok 
 
