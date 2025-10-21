@@ -6,3 +6,4 @@
 1. [Előjel nélküli egészek, `?:` operátor, alprogramok, random számok](./demo04.md)
 1. [Tömbök](./demo05.md)
 1. [Pointerek](./demo06.md)
+1. [Parancssori argumentumok kezelése](./demo07.md)
