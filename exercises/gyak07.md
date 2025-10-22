@@ -20,12 +20,12 @@ A beolvasott számokat konvertáljuk át 10-es számrendszerbe, majd tároljuk �
 > - Csak a megfelelő karaktereket fogadjuk el, minden mást vessünk el (nagybetű belefér) és jelezzük a hibát
 > - `EOF` használata linuxban: **Ctrl+D**; windowsban: **Ctrl+Z** (**Enter**)
 > - Jobb eszköz híján válasszunk egy "kellően" nagy tömböt a várható számok tárolásához
-2. Készíts egy alprogramot, amely egy paraméterben kapott nxn-es mátrixot feltölt az n-es szorzótábla értékeivel. Majd írasd ki a főprogramban az egészet a standard kimenetre a következő formátumban: *a x b = c*, ahol *a* és *b* a szorzandó elemek, *c* pedig a mátrixban tárolt érték.
-3. Írj programot, amely 1-től n-ig kiszámolja a pozitív számok összegét. *n*-et olvasd be a standard inputról, ad át a paramétert egy alprogramnak, mely visszatér az eredménnyel.
-4. Írj programot, amely kiírja egy szám első n hatványát! A számot olvasd be parancssori argumentumként. A program készüljön fel arra az esete is, ha nem érkezik külső argumentum.
+2. Készíts egy alprogramot, amely egy paraméterben kapott nxn-es mátrixot feltölt az n-es szorzótábla értékeivel. Majd írasd ki a főprogramban az egészet a standard kimenetre a következő formátumban: *a x b = c*, ahol *a* és *b* a szorzandó elemek, *c* pedig a mátrixban tárolt érték. Feltehetjük, hogy n <= 10.
+3. Írj programot, amely 1-től n-ig kiszámolja a pozitív számok összegét. *n*-et olvasd be a standard inputról, add át a paramétert egy alprogramnak, mely visszatér az eredménnyel.
+4. Írj programot, amely kiírja egy szám első n hatványát! A számokat olvasd be parancssori argumentumként. A program készüljön fel arra az esete is, ha nem érkezik külső argumentum.
 5. Írj programot, amely megcseréli egy legalább *3* jegyű szám első és utolsó számjegyét!
 > - Tetszőleges sok számjegyű számra működjön!
-6. Készíts egy alprogramot, mely feltölt egy kapott tömböt 0 és 100 közötti véletlen valós értékekkel. Ezután a főprogram állapítsa meg a tömbről, hogy hány eleme nagyobb 50-nél.
+6. Készíts egy alprogramot, mely feltölt egy kapott tömböt 0 és 100 közötti véletlen valós értékekkel. Ezután a főprogram állapítsa meg a tömbről, hogy hány eleme nagyobb 50-nél. Parancssori argumentumként kérd be a tömb elemeinek számát, amely legfeljebb 1000.
 
 
 ### Opcionális feladatok
