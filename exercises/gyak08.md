@@ -17,16 +17,31 @@ Először készítsük el egy fájlba a programot, majd rakjuk külön fordítá
 
 ### Kötelező feladatok
 
-1. Deklarálj és definiálj egy változót a `main` függvényen kívül! Változtasd az értékét és írasd ki!
+1. Deklarálj és definiálj egy változót a `main` függvényen kívül (globális változót hozz létre)! Változtasd az értékét és írasd ki!
 2. Készíts egy függvényt, benne deklarálj és definiálj egy változót! El tudod érni a változót a függvényen kívül?
 3. Írj egy elágazást az előző feladatban megírt függvénybe a változó definíció után! Vizsgáld meg, hogy a változót eléred-e az `if` feltételében, valamint az igaz blokkjában, továbbá opcionálisan az `else` és `else if` ágában!
 4. Deklarálj és definiálj változót egy `if` bármelyik ágában, vagy egy tetszőleges ciklus magjában! Vizsgáld meg, hogy a változót eléred-e a blokkon kívül!
 5. Hozz létre egymásba ágyazott scope-okat ("{}" párok közti blokkokat), vezess be mindegyikben egy változót! Vizsgáld, hogy melyik scope-ból melyik változókat éred el! Mikor lehet érdemes scope-okat használni? Mi az a verem és miképp csatlakozik a scope kezeléshez?
+Példa:
+```
+    {
+        int j;
+        {
+            int k;
+            {
+                int k;
+            }
+        }
+        int l;
+    }
+```
+Mikor melyiket éred el?
+
 6. Deklarálj előre egy függvényt, majd definiáld azt, paraméterül más paraméterneveket használva! Mi történik? Mikor lehet ez hasznos?
 7. Deklarálj egy kétparaméterű függvényt, ugyanazon változónevet használva a két paraméternek! Mi történik?
 > Hozz létre egy **my_utils.h** és **my_utils.c** fájlt! Az elkövetkezendő feladatok (8,9,10) függvény deklarációit helyezd a header file-ba, a definícióit pedig a c fájlba. Az eddigi **main.c** fájlban include-old a headert, majd a main-ben hívd a függvényeket!
 8. Hozz létre egy függvényt, deklarálj és definiálj benne egy `static` változót! Növeld meg a változó értékét és írasd ki! Hívd meg a `main`-ben többször is a függvényt! Mi történik?
-9. Írj egy swap függvényt, amely megcseréli két `int` változó értékét!
+9. Írj egy `swap` függvényt, amely megcseréli két `int` változó értékét! Tehát hozz létre két változót (mondjuk `a` és `b`), és cseréld ki az értékeket a `swap` függvényen keresztül!
 10. Írj egy olyan függvényt, amely két `int` pointert vár paraméterül, és visszaadja a nagyobb értékre mutató pointert!
 11. Módosítsd a swap feladatot úgy, hogy a függvényt a main-en belül deklarálod és definiálod! Működik-e a program GCC és Clang fordítóval? Mikor lehet ez a funkcionalitás hasznos?
 
