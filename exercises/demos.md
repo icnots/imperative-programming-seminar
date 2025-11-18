@@ -9,3 +9,5 @@
 1. [Parancssori argumentumok kezelése](./demo07.md)
 1. [Fájlokra tagolás, modulok](./demo08.md)
 1. [Fájlkezelés](./demo09.md)
+1. [Dinamikus memóriakezelés](./demo10.md)
+
