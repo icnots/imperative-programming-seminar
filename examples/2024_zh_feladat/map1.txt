@@ -1,0 +1,30 @@
+Central Station
+4 8
+Greenwood Lane
+7 1
+Sunset Boulevard
+3 5
+Maple Avenue
+9 4
+Broadway
+2 10
+Oak Street
+6 3
+Cherry Blossom Road
+1 7
+Highland Circle
+8 2
+Lakeside
+5 9
+West End
+10 6
+Downtown Plaza
+3 4
+Cedar Hill
+7 8
+Pine Street
+9 1
+Victoria Square
+2 6
+Meadow View
+4 5
