@@ -15,7 +15,7 @@ Alice,30
 Bob,25
 Charlie,40
 ```
-Dolgozzuk fel a bemeneti adatokat `stdin`-ről EOF-ig vagy amennyiben adottak parancssori argumentumok, akkor azok által meghatározott fájlokból (tehát több fájl az összes embert az összes fájlból beolvassuk). Hiábs fájlokat hagyjuk ki. Feltehető, hogy nincsenek hibás sorok a fájlokban.
+Dolgozzuk fel a bemeneti adatokat `stdin`-ről EOF-ig vagy amennyiben adottak parancssori argumentumok, akkor azok által meghatározott fájlokból (tehát több fájl az összes embert az összes fájlból beolvassuk). Hibás fájlokat hagyjuk ki. Feltehető, hogy nincsenek hibás sorok a fájlokban.
 A végén összegezzük, hogy hány embert olvastunk be.
 
 ## Példa ZH (tavalyi ZH): Canvasban letölthető zip formában
